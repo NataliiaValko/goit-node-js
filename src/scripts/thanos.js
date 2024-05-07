@@ -1,9 +1,9 @@
 import fs from 'node:fs/promises';
-import path from 'node:path';
+
+import { PATH_DB } from '../constants/contacts.js';
 
 export const thanos = async () => {
-  const pathDb = path.join('src', 'db', 'db.json');
-  const contactsBuffer = await fs.readFile(pathDb);
+  const contactsBuffer = await fs.readFile(PATH_DB);
   const contacts = JSON.parse(contactsBuffer.toString());
 
   const newContacts = contacts.reduce((acc, contact) => {
@@ -14,7 +14,10 @@ export const thanos = async () => {
     return acc;
   }, []);
 
-  await fs.writeFile(pathDb, Buffer.from(JSON.stringify(newContacts, null, 2)));
+  await fs.writeFile(
+    PATH_DB,
+    Buffer.from(JSON.stringify(newContacts, null, 2)),
+  );
 };
 
 await thanos();
