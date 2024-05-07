@@ -1,0 +1,22 @@
+{
+  "name": "goit-node-js",
+  "version": "1.0.0",
+  "description": "goit-node-js",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "generate": "node src/generateContacts.js",
+    "add-one": "node src/addOneContact.js",
+    "clear": "node src/clearContacts.js",
+    "count": "node src/countContacts.js",
+    "thanos": "node src/thanos.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.2.0",
+    "eslint": "^9.2.0",
+    "globals": "^15.1.0"
+  }
+}
