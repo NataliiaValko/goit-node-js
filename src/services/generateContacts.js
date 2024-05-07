@@ -1,3 +1,3 @@
 const generateContacts = async (number) => {};
 
-console.log(await generateContacts(5));
+await generateContacts(5);
