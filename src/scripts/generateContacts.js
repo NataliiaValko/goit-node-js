@@ -14,4 +14,4 @@ const generateContacts = async (number) => {
   await fs.writeFile(PATH_DB, Buffer.from(JSON.stringify(contacts, null, 2)));
 };
 
-await generateContacts(5);
+generateContacts(5);

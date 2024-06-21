@@ -6,4 +6,4 @@ export const removeAllContacts = async () => {
   await fs.writeFile(PATH_DB, Buffer.from(JSON.stringify([], null, 2)));
 };
 
-await removeAllContacts();
+removeAllContacts();
